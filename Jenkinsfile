@@ -15,6 +15,12 @@ pipeline {
                     
                     sh getversion.sh
                     echo ${version}
+                    
+                    for i in `cat local.config | awk '{print $1}'`
+                    do
+                        echo $i
+                    done
+                    
                '''
             }
         }
