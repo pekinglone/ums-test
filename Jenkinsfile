@@ -9,13 +9,13 @@ pipeline {
     stages {
         stage('环境变量') {
             steps {
-                script {
+                sh '''
                     pwd
                     ls -al
                     
                     source getversion.sh
                     echo ${version}
-                }
+               '''
             }
         }
     }
