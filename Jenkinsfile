@@ -12,16 +12,7 @@ pipeline {
                 script {
                     source getversion.sh
                     echo ${version}
-                    #for i in ${APP_NAME[@]} 
-                    #do
-                    #    echo ${i}
-                    #done
 
-                    echo "######"
-                    #for j in `cat local.config | awk '{print $1}'` 
-                    #do
-                    #    echo ${j}
-                    #done
             }
         }
     }
