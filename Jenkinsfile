@@ -12,7 +12,7 @@ pipeline {
                 script {
                     source getversion.sh
                     echo ${version}
-
+                }
             }
         }
     }
