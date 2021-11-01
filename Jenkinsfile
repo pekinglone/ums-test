@@ -9,8 +9,8 @@ pipeline {
     stages {
         stage('环境变量') {
             steps {
-                sh '
-                    source getversion.sh
+                script {
+                    source getversion.sh ;
                     echo ${version}
                     for i in ${APP_NAME[@]} 
                     do
@@ -18,11 +18,10 @@ pipeline {
                     done
 
                     echo "######"
-                    for j in `cat local.config | awk \'{print $1}\'` 
+                    for j in `cat local.config | awk '{print $1}'` 
                     do
                         echo ${j}
                     done
-                '
             }
         }
     }
