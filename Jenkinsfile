@@ -21,6 +21,12 @@ pipeline {
                         echo $i
                     done
                     
+                    echo "#####"
+                    for j in ${APP_NAME[@]}
+                    do
+                        echo $j
+                    done
+                    
                '''
             }
         }
