@@ -13,7 +13,7 @@ pipeline {
                     pwd
                     ls -al
                     
-                    source getversion.sh
+                    sh getversion.sh
                     echo ${version}
                '''
             }
